@@ -147,3 +147,36 @@ footer { position: relative; z-index: 1; padding: 18px 12px 24px; color: #77769f
 
 /* Oculta el marco de reserva cuando la foto real sí existe. */
 .memory-card img:not([hidden]) + .photo-placeholder { display: none; }
+
+
+/* Presentación especial del poema de cumpleaños */
+.poem-letter .letter-title {
+  margin: 0 0 10px;
+  color: #f0abfc;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  line-height: 1.35;
+  text-align: center;
+}
+.poem-letter .poem-dedication {
+  margin: 0 0 30px;
+  color: #c4b5fd;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .86rem;
+  line-height: 1.7;
+  text-align: center;
+}
+.poem-letter p:not(.letter-title):not(.poem-dedication) {
+  margin: 0 0 25px;
+}
+.poem-letter .poem-pause {
+  margin: 34px 0 !important;
+  color: #f0abfc;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.poem-letter .poem-closing {
+  margin-top: 36px !important;
+  color: #f0abfc;
+  font-size: 1.13rem;
+  text-align: center;
+}
