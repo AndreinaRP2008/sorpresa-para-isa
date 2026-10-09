@@ -33,7 +33,7 @@ const nextButton = document.getElementById("next-button");
 const progressBar = document.getElementById("progress-bar");
 const progressLabel = document.getElementById("progress-label");
 
-function showChapter(index) {
+function showChapter(index, shouldScroll = false) {
   currentChapter = Math.max(0, Math.min(index, chapters.length - 1));
   chapters.forEach((chapter, i) => chapter.classList.toggle("active", i === currentChapter));
   previousButton.disabled = currentChapter === 0;
@@ -41,13 +41,16 @@ function showChapter(index) {
   progressBar.style.width = `${((currentChapter + 1) / chapters.length) * 100}%`;
   progressLabel.textContent = `Capítulo ${currentChapter + 1} de ${chapters.length}`;
   if (currentChapter === 4) document.getElementById("gift-button").focus({ preventScroll: true });
+  if (shouldScroll) {
+    chapters[currentChapter].scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
-previousButton.addEventListener("click", () => showChapter(currentChapter - 1));
+previousButton.addEventListener("click", () => showChapter(currentChapter - 1, true));
 nextButton.addEventListener("click", () => {
   if (currentChapter === chapters.length - 1) {
     showChapter(0);
     showScreen("welcome");
-  } else showChapter(currentChapter + 1);
+  } else showChapter(currentChapter + 1, true);
 });
 
 document.querySelectorAll(".reason").forEach(button => {
