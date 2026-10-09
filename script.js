@@ -18,7 +18,7 @@ document.querySelectorAll("[data-screen]").forEach(button => {
 birthdayForm.addEventListener("submit", event => {
   event.preventDefault();
   // Es una pista lúdica, no una contraseña ni una medida de seguridad.
-  if (birthdayInput.value === "2026-10-21") {
+  if (birthdayInput.value === "2005-10-21") {
     gateMessage.textContent = "";
     showScreen("story");
     showChapter(0);
