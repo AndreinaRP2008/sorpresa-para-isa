@@ -63,7 +63,7 @@ document.querySelectorAll(".reason").forEach(button => {
 const envelopeMessages = {
   "bad-day": "Amor, respira un poquito. No tienes que resolverlo todo hoy ni ser fuerte cada segundo. Un día difícil no define quién eres ni todo lo bonito que todavía te espera. Ojalá pudiera abrazarte ahora, escucharte sin prisas y recordarte que no tienes que poder con todo a la vez. Estoy mandándote muchísimo cariño. 💜",
   "miss-you": "Si has abierto esto porque me extrañas, imagina que te abrazo muy fuerte y me quedo ahí un ratito, sin que tengamos que decir nada. La distancia puede hacer que algunos días pesen más, pero también me recuerda lo mucho que significan para mí nuestros momentos. Cierra los ojos un segundo: te mando un beso enorme. 💌",
-  "laugh": "Aviso oficial: este sobre contiene una cantidad científicamente imposible de besos, un abrazo que no cabe en la pantalla y una orden muy seria de que sonrías aunque sea un poquito. Si no funciona, vuelve a abrirlo. Si sigue sin funcionar, te debo una sesión de tonterías hasta que te rías. 😂",
+  "laugh": "Aviso oficial: este sobre contiene una cantidad científicamente imposible de besos, un abrazo que no cabe en la pantalla y una orden muy seria de que sonrías aunque sea un poquito. Si no funciona, vuelve a abrirlo. Y si el día sigue siendo complicado, recuerda que aquí tienes un rinconcito lleno de cariño para ti. 😂",
   "proud": "Por si hoy se te ha olvidado: no necesitas tenerlo todo claro para estar avanzando. Puedes aprender, equivocarte, descansar y volver a intentarlo. Yo deseo que veas en ti todo lo bueno que hay, incluso cuando te cueste encontrarlo. Estoy celebrando a la persona que eres y a la que sigues construyendo. ⭐"
 };
 document.querySelectorAll(".envelope").forEach(button => {
