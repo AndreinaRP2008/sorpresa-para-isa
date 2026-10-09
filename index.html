@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b1b">
+  <meta name="description" content="Un pequeño universo creado con amor para Isa.">
+  <title>Un universo para Isa ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+
+  <main>
+    <section class="screen active" id="welcome" aria-labelledby="welcome-title">
+      <p class="eyebrow">✦ UNA PEQUEÑA MISIÓN PARA TI ✦</p>
+      <div class="moon" aria-hidden="true">☾</div>
+      <p class="kicker">Para alguien muy especial</p>
+      <h1 id="welcome-title">Hoy el universo<br><span>tiene tu nombre.</span></h1>
+      <p class="lead">He preparado algo para ti, amor.<br>Pero tendrás que descubrirlo poquito a poco.</p>
+      <button class="button primary" id="start-button">Comenzar la aventura <span aria-hidden="true">↗</span></button>
+      <p class="footnote">Hecho especialmente para Isa, con amor 💜</p>
+    </section>
+
+    <section class="screen" id="gate" aria-labelledby="gate-title">
+      <div class="symbol" aria-hidden="true">✧</div>
+      <p class="eyebrow">PRIMER SECRETO</p>
+      <h2 id="gate-title">Todo empieza con<br><span>un día especial.</span></h2>
+      <p class="lead">Hay una fecha que abre esta primera puerta… ¿te acuerdas de cuál es?</p>
+      <form id="birthday-form" class="gate-form">
+        <label for="birthday">Una fecha importante</label>
+        <input id="birthday" type="date" required>
+        <button class="button primary" type="submit">Abrir la puerta ✦</button>
+        <p class="form-message" id="gate-message" aria-live="polite"></p>
+      </form>
+      <button class="text-button" data-screen="welcome">← Volver</button>
+    </section>
+
+    <section class="screen story" id="story" aria-labelledby="story-title">
+      <p class="eyebrow">BIENVENIDO A TU PEQUEÑO UNIVERSO</p>
+      <h2 id="story-title">Feliz cumpleaños,<br><span>mi amor.</span></h2>
+      <p class="lead">No sabía cómo meter todo lo que siento en un solo regalo…<br>así que he creado este pequeño universo para ti.</p>
+
+      <div class="progress-track" aria-label="Progreso de la sorpresa"><span id="progress-bar"></span></div>
+      <p class="progress-label" id="progress-label">Capítulo 1 de 3</p>
+
+      <article class="chapter active" data-chapter="0">
+        <div class="chapter-symbol" aria-hidden="true">✦</div>
+        <p class="eyebrow">CAPÍTULO 01</p>
+        <h3>Pequeños recuerdos,<br>un amor enorme.</h3>
+        <p class="copy">Hay momentos que parecen pequeños cuando ocurren, pero que con el tiempo se convierten en tesoros. Aquí quiero guardar algunos de los nuestros.</p>
+        <div class="memory-grid">
+          <figure class="memory-card">
+            <img src="assets/recuerdo-1.jpg" alt="Un recuerdo especial de los dos" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+            <div class="photo-placeholder"><span>♡</span><small>Aquí irá una foto vuestra</small></div>
+            <figcaption>Un recuerdo que guardo con cariño</figcaption>
+          </figure>
+          <figure class="memory-card">
+            <img src="assets/recuerdo-2.jpg" alt="Otro recuerdo especial de los dos" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+            <div class="photo-placeholder"><span>✧</span><small>Y aquí, otro momento</small></div>
+            <figcaption>De esos momentos que repetiría</figcaption>
+          </figure>
+        </div>
+        <blockquote class="note">«Ojalá pudieras verte a través de mis ojos, aunque solo fuera un instante.»</blockquote>
+      </article>
+
+      <article class="chapter" data-chapter="1">
+        <div class="chapter-symbol" aria-hidden="true">♡</div>
+        <p class="eyebrow">CAPÍTULO 02</p>
+        <h3>Algo que quiero<br>que nunca olvides.</h3>
+        <p class="copy">Amor, hoy celebro que existas. Celebro tu forma de ser, todo lo que te hace único y la suerte que siento de poder compartir una parte de mi vida contigo.</p>
+        <p class="copy">Aunque hoy estemos lejos, quiero que este pequeño rincón te haga sentir un poquito más cerca de mí. Mereces cosas bonitas, hoy y todos los días.</p>
+        <blockquote class="note note-center">Gracias por existir, Isa.<br><span>Qué bonito que seas tú. 💜</span></blockquote>
+        <p class="hint">Esta carta es provisional: luego la convertiremos en tus propias palabras.</p>
+      </article>
+
+      <article class="chapter" data-chapter="2">
+        <div class="chapter-symbol" aria-hidden="true">🎁</div>
+        <p class="eyebrow">CAPÍTULO 03 · ÚLTIMA PUERTA</p>
+        <h3>Hay algo más<br>esperándote…</h3>
+        <p class="copy">No puedo enviarte un abrazo dentro de esta pantalla, pero sí puedo recordarte cuánto significas para mí.</p>
+        <button class="gift" id="gift-button" aria-label="Abrir tu regalo">
+          <span class="gift-aura" aria-hidden="true"></span>
+          <span class="gift-emoji" aria-hidden="true">🎁</span>
+          <span class="gift-label">Toca para abrir tu regalo</span>
+        </button>
+        <div class="reveal" id="gift-reveal" hidden>
+          <div class="sparkles" aria-hidden="true">✦　✧　♡　✦　✧</div>
+          <h3>¡Feliz cumpleaños, amor!</h3>
+          <p>Si pudiera pedir algo hoy, sería que la vida te devolviera un poquito de toda la felicidad que mereces.</p>
+          <p class="signature">Con todo mi amor, para ti. 💜</p>
+        </div>
+      </article>
+
+      <nav class="chapter-nav" aria-label="Navegación de capítulos">
+        <button class="button secondary" id="previous-button" disabled>← Anterior</button>
+        <button class="button primary" id="next-button">Siguiente ✦</button>
+      </nav>
+      <button class="text-button restart" id="restart-button">Volver al principio</button>
+    </section>
+  </main>
+
+  <footer>Un pequeño universo creado con amor para Isa · 21.10.2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
